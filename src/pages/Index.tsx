@@ -2,6 +2,7 @@ import React from "react";
 import TerminalWindow from "../components/TerminalWindow";
 import TypingText from "../components/TypingText";
 import AsciiArt from "../components/AsciiArt";
+import StatusMessages from "../components/StatusMessages";
 
 const Index = () => {
   return (
@@ -13,8 +14,9 @@ const Index = () => {
           </div>
           
           <AsciiArt />
+          <StatusMessages />
           
-          <div className="space-y-4">
+          <div className="space-y-4 mt-8">
             <TypingText 
               text="$ initializing dickhead protocol..." 
               delay={70}
@@ -34,7 +36,7 @@ const Index = () => {
                 delay={40}
               />
               <TypingText 
-                text="→ Status: Ready for launch" 
+                text="→ Status: Ready for launch 🚀" 
                 delay={40}
               />
             </div>
