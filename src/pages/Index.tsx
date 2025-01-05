@@ -3,6 +3,7 @@ import TerminalWindow from "../components/TerminalWindow";
 import TypingText from "../components/TypingText";
 import AsciiArt from "../components/AsciiArt";
 import StatusMessages from "../components/StatusMessages";
+import { MessageCircle } from "lucide-react";
 
 const Index = () => {
   return (
@@ -56,11 +57,19 @@ const Index = () => {
               />
             </div>
 
-            <div className="mt-4 text-terminal-highlight">
-              <TypingText 
-                text="$ Join us and become a dickhead: t.me/dickheadscoin" 
-                delay={40}
-              />
+            <div className="mt-4 text-terminal-highlight flex items-center gap-2">
+              <MessageCircle className="text-terminal-text" size={20} />
+              <a 
+                href="https://t.me/dickheadscoin" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-terminal-highlight transition-colors"
+              >
+                <TypingText 
+                  text="$ Join us and become a dickhead: t.me/dickheadscoin" 
+                  delay={40}
+                />
+              </a>
             </div>
           </div>
         </div>
