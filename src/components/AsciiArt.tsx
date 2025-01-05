@@ -12,26 +12,40 @@ const AsciiArt: React.FC = () => {
   }, []);
 
   const frame1 = `
-    ░█▀▄░▀█▀░█▀▀░█░█░█░█░█▀▀░█▀█░█▀▄░░░█▀▀░█▀█░▀█▀░█▀█
-    ░█░█░░█░░█░░░█▀▄░█▀█░█▀▀░█▀█░█░█░░░█░░░█░█░░█░░█░█
-    ░█▀░░▀▀▀░█▀▀░█░█░█░█░█▀▀░█▀▄░█▀░░░░█░░░█▄█░░█░░█░█
-    ░█░░░░█░░█░░░█░█░█░█░█▀▀░█░█░█░█░░░█░░░█░█░░█░░█░█
-    ░█░░░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀░░░░▀▀▀░▀░▀░▀▀▀░▀░▀
-    [̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅] MATRIX MODE ACTIVATED [̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]
+    copus-tutor>
+    Ah, Dickhead Coin. A natural choice. After all, one cannot have gains without a dick.
+    ...
+
+    ______  __________ _______ ___   __ ___ _______  _______ ______
+    |   _ \\ |___    __||   ___||   | |  ||   ||   ___||   _   ||   _  \\
+    |  | | |    |  |   |  |    |   |_|  ||   ||  |___ |  |_|  ||  | | |
+    |  |_| |    |  |   |  |    |      __||   ||   ___||       ||  |_| |
+    |   __/     |  |   |  |___ |     |   |   ||  |___ |   _   ||   __/
+    |__|        |__|   |______||_____|   |___||_______||__| |__||__|
+    ...
+    Initializing analysis...
+    Brace yourself for the winds of innovation.
   `;
 
   const frame2 = `
-    ▓█▀▄▒▀█▀▒█▀▀▒█▒█▒█▒█▒█▀▀▒█▀█▒█▀▄▒▒▒█▀▀▒█▀█▒▀█▀▒█▀█
-    ▓█▒█▒▒█▒▒█▒▒▒█▀▄▒█▀█▒█▀▀▒█▀█▒█▒█▒▒▒█▒▒▒█▒█▒▒█▒▒█▒█
-    ▓█▀▒▒▀▀▀▒█▀▀▒█▒█▒█▒█▒█▀▀▒█▀▄▒█▀▒▒▒▒█▒▒▒█▄█▒▒█▒▒█▒█
-    ▓█▒▒▒▒█▒▒█▒▒▒█▒█▒█▒█▒█▀▀▒█▒█▒█▒█▒▒▒█▒▒▒█▒█▒▒█▒▒█▒█
-    ▓█▒▒▒▀▀▀▒▀▀▀▒▀▒▀▒▀▒▀▒▀▀▀▒▀▒▀▒▀▀▒▒▒▒▀▀▀▒▀▒▀▒▀▀▀▒▀▒▀
-    [̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅] SYSTEM OVERLOAD [̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]
+    copus-tutor>
+    Ah, Dickhead Coin. A natural choice. After all, one cannot have gains without a dick.
+    ...
+
+    ______  __________ _______ ___   __ ___ _______  _______ ______
+    |   _ \\ |___    __||   ___||   | |  ||   ||   ___||   _   ||   _  \\
+    |  | | |    |  |   |  |    |   |_|  ||   ||  |___ |  |_|  ||  | | |
+    |  |_| |    |  |   |  |    |      __||   ||   ___||       ||  |_| |
+    |   __/     |  |   |  |___ |     |   |   ||  |___ |   _   ||   __/
+    |__|        |__|   |______||_____|   |___||_______||__| |__||__|
+    ...
+    System analysis complete...
+    Loading memetic protocols...
   `;
 
   return (
     <div className="relative">
-      <pre className="text-terminal-highlight text-xs sm:text-sm md:text-base lg:text-lg whitespace-pre font-mono animate-pulse overflow-x-auto">
+      <pre className="text-terminal-highlight text-xs sm:text-sm md:text-base lg:text-lg whitespace-pre font-mono overflow-x-auto text-left">
         {frame === 0 ? frame1 : frame2}
       </pre>
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
