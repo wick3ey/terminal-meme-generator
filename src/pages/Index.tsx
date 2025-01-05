@@ -9,7 +9,7 @@ import { useState } from "react";
 
 const Index = () => {
   const [copied, setCopied] = useState(false);
-  const tokenAddress = "0x123...789"; // Replace with actual token address
+  const tokenAddress = "XXX"; // Replace with actual token address
 
   const copyToClipboard = async () => {
     try {
