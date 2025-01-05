@@ -18,15 +18,15 @@ const TypingText: React.FC<TypingTextProps> = ({
     if (currentIndex < text.length) {
       const randomDelay = delay + (Math.random() * 50 - 25); // Add some randomness
       const timeout = setTimeout(() => {
-        setDisplayedText(prev => prev + text[currentIndex]);
+        setDisplayedText(text.substring(0, currentIndex + 1));
         setCurrentIndex(prev => prev + 1);
       }, randomDelay);
 
       return () => clearTimeout(timeout);
-    } else if (onComplete) {
+    } else if (onComplete && displayedText === text) {
       onComplete();
     }
-  }, [currentIndex, delay, text, onComplete]);
+  }, [currentIndex, delay, text, onComplete, displayedText]);
 
   return (
     <div className="font-mono text-left">
