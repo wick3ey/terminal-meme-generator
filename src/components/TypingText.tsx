@@ -16,17 +16,17 @@ const TypingText: React.FC<TypingTextProps> = ({
 
   useEffect(() => {
     if (currentIndex < text.length) {
-      const randomDelay = delay + (Math.random() * 50 - 25); // Add some randomness
+      const randomDelay = delay + (Math.random() * 50 - 25);
       const timeout = setTimeout(() => {
         setDisplayedText(text.substring(0, currentIndex + 1));
         setCurrentIndex(prev => prev + 1);
       }, randomDelay);
 
       return () => clearTimeout(timeout);
-    } else if (onComplete && displayedText === text) {
+    } else if (currentIndex === text.length && onComplete) {
       onComplete();
     }
-  }, [currentIndex, delay, text, onComplete, displayedText]);
+  }, [currentIndex, delay, text, onComplete]);
 
   return (
     <div className="font-mono text-left">
