@@ -18,26 +18,25 @@ const StatusMessages: React.FC = () => {
       const timeout = setTimeout(() => {
         setIsTyping(true);
         setMessageIndex((prev) => (prev + 1) % messages.length);
-      }, 2000); // Increased wait time to 2 seconds after typing completes
+      }, 2000);
 
       return () => clearTimeout(timeout);
     }
   }, [isTyping, messages.length]);
 
   const handleTypingComplete = () => {
-    // Only set isTyping to false when the entire message is done
     setTimeout(() => {
       setIsTyping(false);
-    }, 500); // Added small delay after typing completes
+    }, 500);
   };
 
   return (
-    <div className="mt-6 text-terminal-highlight font-mono">
-      <div className="text-lg md:text-xl font-bold h-8">
+    <div className="mt-4 sm:mt-6 text-terminal-highlight font-mono">
+      <div className="text-base sm:text-lg md:text-xl font-bold h-6 sm:h-8">
         {isTyping && (
           <TypingText 
             text={messages[messageIndex]}
-            delay={100} // Slightly slower typing speed
+            delay={100}
             onComplete={handleTypingComplete}
           />
         )}

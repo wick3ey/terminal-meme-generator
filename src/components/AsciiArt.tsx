@@ -45,7 +45,7 @@ const AsciiArt: React.FC = () => {
 
   return (
     <div className="relative">
-      <pre className="text-terminal-highlight text-xs sm:text-sm md:text-base lg:text-lg whitespace-pre font-mono overflow-x-auto text-left">
+      <pre className="text-terminal-highlight text-[0.6rem] xs:text-xs sm:text-sm md:text-base lg:text-lg whitespace-pre font-mono overflow-x-auto text-left">
         {frame === 0 ? frame1 : frame2}
       </pre>
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">

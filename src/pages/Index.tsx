@@ -7,23 +7,23 @@ import { MessageCircle } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-terminal-bg p-4">
+    <div className="min-h-screen bg-terminal-bg p-2 sm:p-4 md:p-6 lg:p-8">
       <TerminalWindow>
-        <div className="space-y-6">
-          <div className="mb-8">
+        <div className="space-y-4 sm:space-y-6">
+          <div className="mb-4 sm:mb-8">
             <TypingText text="Welcome to Dickhead Coin Terminal v1.0.0" />
           </div>
           
           <AsciiArt />
           <StatusMessages />
           
-          <div className="space-y-4 mt-8">
+          <div className="space-y-3 sm:space-y-4 mt-6 sm:mt-8">
             <TypingText 
               text="$ initializing dickhead protocol..." 
               delay={70}
             />
             
-            <div className="mt-8 space-y-2">
+            <div className="mt-6 sm:mt-8 space-y-2">
               <TypingText 
                 text="TOKEN INFO:" 
                 delay={50}
@@ -58,12 +58,12 @@ const Index = () => {
             </div>
 
             <div className="mt-4 text-terminal-highlight flex items-center gap-2">
-              <MessageCircle className="text-terminal-text" size={20} />
+              <MessageCircle className="text-terminal-text w-4 h-4 sm:w-5 sm:h-5" />
               <a 
                 href="https://t.me/dickheadscoin" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="hover:text-terminal-highlight transition-colors"
+                className="hover:text-terminal-highlight transition-colors text-sm sm:text-base"
               >
                 <TypingText 
                   text="$ Join us and become a dickhead: t.me/dickheadscoin" 
@@ -73,8 +73,8 @@ const Index = () => {
             </div>
           </div>
 
-          <pre className="text-terminal-text text-xs sm:text-sm md:text-base whitespace-pre font-mono mt-8">
-{`⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <pre className="text-terminal-text text-[0.6rem] xs:text-xs sm:text-sm md:text-base whitespace-pre font-mono mt-6 sm:mt-8 overflow-hidden">
+            {`⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣾⣟⡿⣝⣻⠉⠉⠛⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣇⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⢻⣮⢷⣻⣯⡟⣷⢦⡀⠀⠙⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⢠⣤⣾⣿⣿⣶⣄⡀⠀⠀⠀⣰⣿⣛⣾⢻⣼⣳⣿⣳⣻⣭⡟⣿⡄⠀⣹⣿⠀⠀⠀⠀⠀⠀⠀⠀
