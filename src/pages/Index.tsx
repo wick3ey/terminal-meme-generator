@@ -7,7 +7,7 @@ import { MessageCircle } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-terminal-bg p-4 sm:p-8 space-y-8">
+    <div className="min-h-screen bg-terminal-bg p-4 sm:p-8">
       <TerminalWindow>
         <div className="space-y-6">
           <div className="mb-8">
@@ -72,11 +72,8 @@ const Index = () => {
               </a>
             </div>
           </div>
-        </div>
-      </TerminalWindow>
 
-      <TerminalWindow>
-        <pre className="text-terminal-text text-xs sm:text-sm md:text-base whitespace-pre font-mono overflow-x-auto">
+          <pre className="text-terminal-text text-xs sm:text-sm md:text-base whitespace-pre font-mono overflow-x-auto mt-8">
 {`⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣾⣟⡿⣝⣻⠉⠉⠛⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣇⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⢻⣮⢷⣻⣯⡟⣷⢦⡀⠀⠙⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀
@@ -108,7 +105,8 @@ const Index = () => {
 ⠀⠀⠀⠀⠀⠀⠀⠙⣷⣿⣽⣷⡿⣽⡾⣿⣿⡿⣟⣷⢿⣯⣟⡿⣯⣿⢯⣷⣿⣿⣿⡿⣽⣯⢿⣽⣿⣿⣞⣿⠃⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢾⣿⣽⣯⢿⣽⡷⣟⣿⣽⠿⠟⠉⠀⠈⠛⠿⣷⣻⣞⣷⢿⣻⣾⣟⣷⣯⡷⠟⠁⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠛⠛⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀`}
-        </pre>
+          </pre>
+        </div>
       </TerminalWindow>
     </div>
   );
