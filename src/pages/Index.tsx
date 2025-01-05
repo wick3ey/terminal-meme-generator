@@ -1,12 +1,53 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from "react";
+import TerminalWindow from "../components/TerminalWindow";
+import TypingText from "../components/TypingText";
+import AsciiArt from "../components/AsciiArt";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-terminal-bg p-4 sm:p-8">
+      <TerminalWindow>
+        <div className="space-y-6">
+          <div className="mb-8">
+            <TypingText text="Welcome to Dickhead Coin Terminal v1.0.0" />
+          </div>
+          
+          <AsciiArt />
+          
+          <div className="space-y-4">
+            <TypingText 
+              text="$ initializing dickhead protocol..." 
+              delay={70}
+            />
+            
+            <div className="mt-8 space-y-2">
+              <TypingText 
+                text="TOKEN INFO:" 
+                delay={50}
+              />
+              <TypingText 
+                text="→ Name: Dickhead Coin (DICK)" 
+                delay={40}
+              />
+              <TypingText 
+                text="→ Blockchain: Solana" 
+                delay={40}
+              />
+              <TypingText 
+                text="→ Status: Ready for launch" 
+                delay={40}
+              />
+            </div>
+            
+            <div className="mt-4">
+              <TypingText 
+                text="Type 'help' for available commands..." 
+                delay={50}
+              />
+            </div>
+          </div>
+        </div>
+      </TerminalWindow>
     </div>
   );
 };
