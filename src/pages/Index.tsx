@@ -73,8 +73,9 @@ const Index = () => {
             </div>
           </div>
 
-          <pre className="text-terminal-text text-[0.6rem] xs:text-xs sm:text-sm md:text-base whitespace-pre font-mono mt-6 sm:mt-8 overflow-hidden">
-            {`⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
+            <pre className="text-terminal-text text-[0.6rem] xs:text-xs sm:text-sm md:text-base whitespace-pre font-mono mt-6 sm:mt-8 overflow-hidden">
+              {`⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣾⣟⡿⣝⣻⠉⠉⠛⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣇⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⢻⣮⢷⣻⣯⡟⣷⢦⡀⠀⠙⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⢠⣤⣾⣿⣿⣶⣄⡀⠀⠀⠀⣰⣿⣛⣾⢻⣼⣳⣿⣳⣻⣭⡟⣿⡄⠀⣹⣿⠀⠀⠀⠀⠀⠀⠀⠀
@@ -105,7 +106,25 @@ const Index = () => {
 ⠀⠀⠀⠀⠀⠀⠀⠙⣷⣿⣽⣷⡿⣽⡾⣿⣿⡿⣟⣷⢿⣯⣟⡿⣯⣿⢯⣷⣿⣿⣿⡿⣽⣯⢿⣽⣿⣿⣞⣿⠃⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢾⣿⣽⣯⢿⣽⡷⣟⣿⣽⠿⠟⠉⠀⠈⠛⠿⣷⣻⣞⣷⢿⣻⣾⣟⣷⣯⡷⠟⠁⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠛⠛⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀`}
-          </pre>
+            </pre>
+            <div className="text-terminal-text text-center md:text-left text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mt-6 md:mt-20">
+              <TypingText 
+                text="DICKHEAD COIN" 
+                delay={100}
+              />
+              <div className="text-terminal-dim text-sm sm:text-base md:text-lg mt-2">
+                <TypingText 
+                  text="For the dickheads, by the dickheads." 
+                  delay={50}
+                />
+                <br />
+                <TypingText 
+                  text="Become a dickhead today." 
+                  delay={50}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </TerminalWindow>
     </div>
