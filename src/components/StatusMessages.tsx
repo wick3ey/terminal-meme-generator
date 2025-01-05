@@ -6,11 +6,11 @@ const StatusMessages: React.FC = () => {
   const [isTyping, setIsTyping] = useState(true);
   
   const messages = [
-    "🚀 WE ARE DICKHEADS 🚀",
-    "💎 HODL THE DICK 💎",
-    "📈 STATUS: BULLISH AF 📈",
-    "🌙 TO THE MOON 🌙",
-    "🦍 APES TOGETHER STRONG 🦍"
+    "WE ARE DICKHEADS",
+    "HODL THE DICK",
+    "STATUS: BULLISH AF",
+    "TO THE MOON",
+    "APES TOGETHER STRONG"
   ];
 
   useEffect(() => {
