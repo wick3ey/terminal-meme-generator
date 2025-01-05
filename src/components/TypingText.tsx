@@ -3,27 +3,35 @@ import React, { useEffect, useState } from "react";
 interface TypingTextProps {
   text: string;
   delay?: number;
+  onComplete?: () => void;
 }
 
-const TypingText: React.FC<TypingTextProps> = ({ text, delay = 50 }) => {
+const TypingText: React.FC<TypingTextProps> = ({ 
+  text, 
+  delay = 50,
+  onComplete 
+}) => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     if (currentIndex < text.length) {
+      const randomDelay = delay + (Math.random() * 50 - 25); // Add some randomness
       const timeout = setTimeout(() => {
         setDisplayedText(prev => prev + text[currentIndex]);
         setCurrentIndex(prev => prev + 1);
-      }, delay);
+      }, randomDelay);
 
       return () => clearTimeout(timeout);
+    } else if (onComplete) {
+      onComplete();
     }
-  }, [currentIndex, delay, text]);
+  }, [currentIndex, delay, text, onComplete]);
 
   return (
-    <div className="font-mono">
-      {displayedText}
-      <span className="terminal-cursor"></span>
+    <div className="font-mono text-left">
+      <span className="text-terminal-text">{displayedText}</span>
+      <span className="terminal-cursor animate-blink">_</span>
     </div>
   );
 };

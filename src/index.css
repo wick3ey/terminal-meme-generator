@@ -12,15 +12,15 @@ body {
   padding: 0;
 }
 
-.terminal-cursor::after {
-  content: "_";
-  animation: blink 1s step-start infinite;
+.terminal-cursor {
+  color: #00ff00;
+  font-weight: bold;
 }
 
 .typing-effect {
   overflow: hidden;
-  white-space: nowrap;
-  animation: type-text 2s steps(40, end);
+  white-space: pre;
+  border-right: 2px solid #00ff00;
 }
 
 @keyframes blink {
