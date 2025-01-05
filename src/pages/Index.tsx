@@ -58,7 +58,7 @@ const Index = () => {
 
             <div className="mt-4 text-terminal-highlight">
               <TypingText 
-                text="$ Join us and become a dickhead: t.me/dickheadcoin" 
+                text="$ Join us and become a dickhead: t.me/dickheadscoin" 
                 delay={40}
               />
             </div>
