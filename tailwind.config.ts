@@ -30,11 +30,22 @@ export default {
         "type-text": {
           "0%": { width: "0" },
           "100%": { width: "100%" }
+        },
+        fall: {
+          "0%": { 
+            transform: "translateY(-100%)",
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translateY(100vh)",
+            opacity: "0"
+          }
         }
       },
       animation: {
         blink: "blink 1s step-start infinite",
-        "type-text": "type-text 2s steps(40, end)"
+        "type-text": "type-text 2s steps(40, end)",
+        "fall": "fall 2s linear infinite"
       }
     },
   },
