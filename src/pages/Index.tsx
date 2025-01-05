@@ -55,6 +55,13 @@ const Index = () => {
                 delay={50}
               />
             </div>
+
+            <div className="mt-4 text-terminal-highlight">
+              <TypingText 
+                text="$ Join us and become a dickhead: t.me/dickheadcoin" 
+                delay={40}
+              />
+            </div>
           </div>
         </div>
       </TerminalWindow>
