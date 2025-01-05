@@ -37,6 +37,10 @@ const Index = () => {
                 delay={40}
               />
               <TypingText 
+                text="→ Status: BULLISH" 
+                delay={40}
+              />
+              <TypingText 
                 text="→ Total Supply: 1 billion dickheads" 
                 delay={40}
               />
