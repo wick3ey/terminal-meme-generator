@@ -3,9 +3,24 @@ import TerminalWindow from "../components/TerminalWindow";
 import TypingText from "../components/TypingText";
 import AsciiArt from "../components/AsciiArt";
 import StatusMessages from "../components/StatusMessages";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Copy, Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const Index = () => {
+  const [copied, setCopied] = useState(false);
+  const tokenAddress = "0x123...789"; // Replace with actual token address
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(tokenAddress);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-terminal-bg p-2 sm:p-4 md:p-6 lg:p-8">
       <TerminalWindow>
@@ -122,6 +137,26 @@ const Index = () => {
                   text="Become a dickhead today." 
                   delay={50}
                 />
+                <div className="mt-4 flex items-center gap-2 bg-terminal-dim/20 p-2 rounded-md">
+                  <input 
+                    type="text" 
+                    value={tokenAddress}
+                    readOnly
+                    className="bg-transparent text-terminal-text flex-1 outline-none text-sm"
+                  />
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={copyToClipboard}
+                    className="hover:bg-terminal-dim/30"
+                  >
+                    {copied ? (
+                      <Check className="h-4 w-4 text-terminal-highlight" />
+                    ) : (
+                      <Copy className="h-4 w-4 text-terminal-text" />
+                    )}
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
