@@ -1,28 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import TerminalWindow from "../components/TerminalWindow";
 import TypingText from "../components/TypingText";
 import AsciiArt from "../components/AsciiArt";
 import StatusMessages from "../components/StatusMessages";
-import { MessageCircle, Copy, Check } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
   const [copied, setCopied] = useState(false);
+  const { toast } = useToast();
   const tokenAddress = "XXX"; // Placeholder token address
 
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(tokenAddress);
       setCopied(true);
+      toast({
+        title: "Address copied",
+        description: "Token address copied to clipboard",
+      });
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error("Failed to copy text: ", err);
+      toast({
+        title: "Error",
+        description: "Failed to copy address",
+        variant: "destructive",
+      });
     }
   };
 
   return (
-    <div className="min-h-screen bg-terminal-bg p-2 sm:p-4 md:p-6 lg:p-8">
+    <div className="min-h-screen bg-terminal-bg p-2 sm:p-4 md:p-6 lg:p-8 animate-fade-in">
       <TerminalWindow>
         <div className="space-y-4 sm:space-y-6">
           <div className="mb-4 sm:mb-8">
@@ -38,7 +48,7 @@ const Index = () => {
               delay={70}
             />
             
-            <div className="mt-6 sm:mt-8 space-y-2">
+            <div className="mt-6 sm:mt-8 space-y-2 bg-terminal-dim/10 p-4 rounded-lg border border-terminal-dim/20">
               <TypingText 
                 text="TOKEN INFO:" 
                 delay={50}
@@ -65,31 +75,16 @@ const Index = () => {
               />
             </div>
             
-            <div className="mt-4">
+            <div className="mt-4 bg-terminal-dim/5 p-3 rounded-md border border-terminal-dim/15">
               <TypingText 
                 text="Type 'help' for available commands..." 
                 delay={50}
               />
             </div>
-
-            <div className="mt-4 text-terminal-highlight flex items-center gap-2">
-              <MessageCircle className="text-terminal-text w-4 h-4 sm:w-5 sm:h-5" />
-              <a 
-                href="https://t.me/dickheadscoin" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="hover:text-terminal-highlight transition-colors text-sm sm:text-base"
-              >
-                <TypingText 
-                  text="$ Join us and become a dickhead: t.me/dickheadscoin" 
-                  delay={40}
-                />
-              </a>
-            </div>
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
-            <pre className="text-terminal-text text-[0.6rem] xs:text-xs sm:text-sm md:text-base whitespace-pre font-mono mt-6 sm:mt-8 overflow-hidden">
+            <pre className="text-terminal-text text-[0.6rem] xs:text-xs sm:text-sm md:text-base whitespace-pre font-mono mt-6 sm:mt-8 overflow-hidden animate-fade-in">
               {`⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣾⣟⡿⣝⣻⠉⠉⠛⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣇⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⢻⣮⢷⣻⣯⡟⣷⢦⡀⠀⠙⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀
@@ -137,7 +132,7 @@ const Index = () => {
                   text="Become a dickhead today." 
                   delay={50}
                 />
-                <div className="mt-4 flex items-center gap-2 bg-terminal-dim/20 p-2 rounded-md">
+                <div className="mt-4 flex items-center gap-2 bg-terminal-dim/20 p-2 rounded-md hover:bg-terminal-dim/30 transition-colors">
                   <input 
                     type="text" 
                     value={tokenAddress}
