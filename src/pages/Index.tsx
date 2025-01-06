@@ -10,7 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 const Index = () => {
   const [copied, setCopied] = useState(false);
   const { toast } = useToast();
-  const tokenAddress = "XXX"; // Placeholder token address
+  const tokenAddress = "7wGmyL8Ut5BjPqPmW6KEQppm41baNtXuDQoaHgT7pump"; // Updated token address
 
   const copyToClipboard = async () => {
     try {
